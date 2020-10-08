@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css.css">
+		<script type='text/javascript'>
+			function texto(){
+				
+				var text= prompt ("Ingrese el texto que quiere modificar");
+				document.getElementById("div1").innerHTML = text;
+			}
+			function fondo(){
+				var fondo=document.getElementById("div1");
+				var color=prompt ("Ingrese un color para el fondo");
+				fondo.style.backgroundColor=color;
+				
+			}
+			function letra(){
+				var letra=document.getElementById("div1");
+				var cambiar=prompt ("Ingrese un color para la letra");
+				var fuente=document.getElementById("div1");
+				var tipoletra=prompt ("Ingresa una fuente");
+				letra.style.color=cambiar;
+				fuente.style.fontFamily=tipoletra;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<p id="parrafo"> Este es el contenido del div1<p>
+		</div>
+		<div id="div2">
+			<button onClick="texto()">Cambiar texto</button><br>
+			<button onClick="fondo()">Cambiar color de fondo</button><br>
+			<button onClick="letra()">Cambiar tipo y color de letra</button><br>
+		</div>
+	</body>
+</html>
